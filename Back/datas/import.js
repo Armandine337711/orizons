@@ -3,6 +3,7 @@ const path = require('path');
 require('dotenv').config({
     path: path.join(__dirname, '../../.env')
 });
+
 const {
     Client
 } = require('pg');
@@ -24,8 +25,14 @@ const countries = require('./import_country.json');
 (async () => {
     const client = new Client({
         connectionString: process.env.DATABASE_URL,
+        ssl: {
+            rejectUnauthorized: false
+        }
     });
+
     await client.connect();
+
+
 
     await client.query(`TRUNCATE TABLE _m2m_trip_category,
                                         _m2m_trip_country,
@@ -51,8 +58,8 @@ const countries = require('./import_country.json');
 
         await client.query(`INSERT INTO "category"("entitled", "color", "image") VALUES ($1, $2, $3)`,
             [category.entitled,
-                category.color,
-                category.image
+            category.color,
+            category.image
             ])
 
     };
@@ -61,8 +68,8 @@ const countries = require('./import_country.json');
     for (let localisation of localisations) {
         await client.query(`INSERT INTO "localisation"("country", "region", "city") VALUES ($1, $2, $3)`,
             [localisation.country,
-                localisation.region,
-                localisation.city
+            localisation.region,
+            localisation.city
             ])
 
     }
@@ -71,7 +78,7 @@ const countries = require('./import_country.json');
     for (let photo of photos) {
         client.query(`INSERT INTO "photo"("title", "url") VALUES ($1, $2)`,
             [photo.title,
-                photo.url
+            photo.url
             ])
 
     }
@@ -157,7 +164,7 @@ const countries = require('./import_country.json');
                 photoId
             ])
     }
-
+    console.log("fin du traitement")
 
 })();
 // 10 - Import de la table m2m trip localisation

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 // == Import npm
 import React, { useLayoutEffect, useEffect, useState } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
@@ -50,7 +51,9 @@ function useMediaQuery() {
 
 // == Composant
 
-const App = ({ isLoggedIn, loadMember, loadTrips, loadCountries, loadCategories }) => {
+const App = ({
+  isLoggedIn, loadMember, loadTrips, loadCountries, loadCategories
+}) => {
   const [width] = useMediaQuery();
   useEffect(() => {
     loadTrips();
@@ -100,10 +103,10 @@ const App = ({ isLoggedIn, loadMember, loadTrips, loadCountries, loadCategories 
             <Profile />
           </Route>
           <Route exact path="/ajouter-carnet">
-            { isLoggedIn ? <AddTrip /> : <Redirect to="/connexion" />}
+            {isLoggedIn ? <AddTrip /> : <Redirect to="/connexion" />}
           </Route>
           <Route exact path="/compte">
-            { isLoggedIn ? <Account /> : <Redirect to="/connexion" />}
+            {isLoggedIn ? <Account /> : <Redirect to="/connexion" />}
           </Route>
           <Route exact path="/resultats">
             <Results />
