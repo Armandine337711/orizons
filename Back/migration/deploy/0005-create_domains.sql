@@ -2,7 +2,7 @@
 
 BEGIN;
 
-CREATE DOMAIN TEXT_ONLY AS TEXT CHECK(VALUE ~ '[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\-\s]+');
+CREATE DOMAIN TEXT_ONLY AS TEXT CHECK(VALUE ~ '^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\-\s]+$');
 
 CREATE DOMAIN TEXT_COLOR AS TEXT CHECK(VALUE ~ '^#([\da-fA-F]{3}|[\da-fA-F]{6})$');
 CREATE DOMAIN TEXT_MAIL AS TEXT CHECK(VALUE ~ '(^[a-z\d\.\-\_]+)@{1}([a-z\d\.\-]{2,})[.]([a-z]{2,5})$');

@@ -2,6 +2,6 @@
 
 BEGIN;
 
-DROP VIEW "trip_by_member";
+DROP VIEW IF EXISTS"trip_by_member";
 
 COMMIT;

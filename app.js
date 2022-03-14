@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 //const session = require('express-session');
-const jsonwebtoken = require('jsonwebtoken');
+//const jsonwebtoken = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 
 const router = require('./Back/app/router');

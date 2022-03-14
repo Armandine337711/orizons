@@ -23,6 +23,8 @@ const categoryDataMapper = {
     },
 
     async createCategory(newCategory, urlImage) {
+        console.log("first")
+        console.log(newCategory)
         const result = await client.query("INSERT INTO category(entitled, color, image) VALUES ($1, $2, $3) RETURNING *", [
             newCategory.entitled,
             newCategory.color,

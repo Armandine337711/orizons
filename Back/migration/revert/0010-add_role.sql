@@ -2,8 +2,8 @@
 
 BEGIN;
 
-ALTER TABLE "member" DROP COLUMN "role_id";
+--ALTER TABLE "member" DROP COLUMN "role_id";
 
-DROP TABLE IF EXISTS "docket";
+DROP TABLE IF EXISTS "docket" CASCADE;
 
 COMMIT;

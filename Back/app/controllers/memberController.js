@@ -1,6 +1,6 @@
 const memberDataMapper = require('../datamapper/memberDataMapper');
 const tripDataMapper = require('../datamapper/tripDataMapper')
-const jsonwebtoken = require('jsonwebtoken');
+//const jsonwebtoken = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 const memberController = {

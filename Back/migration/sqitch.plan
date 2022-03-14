@@ -22,3 +22,4 @@
 0120-add-columns 2021-02-03T09:41:52Z "Etudiant O'clock",,, <etudiant@teleporteur> # Add columns in trip_country and step
 0130-add_country_code 2021-02-04T15:41:31Z "Etudiant O'clock",,, <etudiant@teleporteur> # Add country code with 2 letters in country table
 0140-default_member_photos 2021-02-05T11:53:58Z "Etudiant O'clock",,, <etudiant@teleporteur> # Set default in profile photo et cover_member
+

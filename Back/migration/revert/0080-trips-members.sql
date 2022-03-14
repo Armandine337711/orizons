@@ -31,8 +31,8 @@ GROUP BY t."id",
         t."arrival_date";
 
 
-DROP VIEW "category_by_trip";
+DROP VIEW IF EXISTS "category_by_trip";
 
-ALTER TABLE "step" DROP COLUMN "step_date";
+--ALTER TABLE "step" DROP COLUMN "step_date";
 
 COMMIT;

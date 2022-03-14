@@ -2,9 +2,9 @@
 
 BEGIN;
 
-ALTER TABLE "_m2m_trip_country" DROP COLUMN "trip";
+ALTER TABLE "_m2m_trip_country" DROP COLUMN "trip" CASCADE;
 
-ALTER TABLE "step" DROP COLUMN "step_date";
+ALTER TABLE "step" DROP COLUMN "step_date" CASCADE;
 
 
 COMMIT;

@@ -1,5 +1,5 @@
 const express = require('express');
-const jwt = require('../middleware/auth');
+//const jwt = require('../middleware/auth');
 
 const tripRouter = require('./tripRouter');
 const categoryRouter = require('./categoryRouter');

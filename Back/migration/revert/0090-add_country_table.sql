@@ -2,6 +2,6 @@
 
 BEGIN;
 
-DROP TABLE IF EXISTS "country";
+DROP TABLE IF EXISTS "country" CASCADE;
 
 COMMIT;
