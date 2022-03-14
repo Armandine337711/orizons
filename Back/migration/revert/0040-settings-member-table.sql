@@ -3,6 +3,6 @@
 BEGIN;
 
 ALTER TABLE "member" DROP COLUMN "localisation";
-
+ALTER TABLE "member" DROP COLUMN "biography";
 
 COMMIT;
